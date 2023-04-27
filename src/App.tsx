@@ -1,7 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import About from "./app/about/About";
-// 1. import `ChakraProvider` component
 import {ChakraProvider} from '@chakra-ui/react'
 
 function App() {
