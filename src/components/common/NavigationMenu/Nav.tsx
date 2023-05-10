@@ -11,32 +11,18 @@ import {
     Avatar,
     HStack,
     Link,
-    IconButton} from '@chakra-ui/react';
+    IconButton
+} from '@chakra-ui/react';
 
 import {MoonIcon, SunIcon} from '@chakra-ui/icons';
 import {HamburgerIcon, CloseIcon} from '@chakra-ui/icons';
 const Links = [
-    {
-        label: 'About 🙋‍♂️',
-        color: 'blue'
-    },
-    {
-        label: 'Blog 📃',
-        color: 'green'
-    },
-    {
-        label: 'Projects 📝',
-        color: 'purple'
-    },
-    {
-        label: 'Illustration 🖼️',
-        color: 'orange'
-    }, {
-        label: 'GitHub 👨‍💻',
-        color: 'pink'
-    },
+    'About 🙋‍♂️',
+    'Blog 📃',
+    'Projects 📝',
+    'Illustration 🖼️',
+    'GitHub 👨‍💻'
 ];
-
 
 const NavLink = ({children} : {
     children: ReactNode
@@ -50,7 +36,10 @@ const NavLink = ({children} : {
                 bg: useColorModeValue('gray.200', 'gray.700')
             }
         }
-        href={'#'}>
+        href={'#'}
+        fontSize={'xl'}
+        fontWeight={'medium'}
+        >
         {children} </Link>
 );
 
@@ -114,18 +103,21 @@ export default function Nav() {
                 </Flex>
                 {
                 isOpen ? (
-                    <Box pb={4}
+                    <Box pb={8}
+                        pt={8}
                         display={
                             {md: 'none'}
                     }>
-                        <Stack as={'nav'}
-                            spacing={4}>
-                            {
-                            Links.map((link) => (
-                                <NavLink key={link}>
-                                    {link}</NavLink>
-                            ))
-                        } </Stack>
+                        <Flex justifyContent="center">
+                            <Stack as={'nav'}
+                                spacing={4}>
+                                {
+                                Links.map((link) => (
+                                    <NavLink key={link}>
+                                        {link} </NavLink>
+                                ))
+                            } </Stack>
+                        </Flex>
                     </Box>
                 ) : null
             } </Box>
