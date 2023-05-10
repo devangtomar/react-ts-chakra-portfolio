@@ -11,8 +11,7 @@ import {
     Avatar,
     HStack,
     Link,
-    IconButton
-} from '@chakra-ui/react';
+    IconButton} from '@chakra-ui/react';
 
 import {MoonIcon, SunIcon} from '@chakra-ui/icons';
 import {HamburgerIcon, CloseIcon} from '@chakra-ui/icons';
@@ -115,21 +114,18 @@ export default function Nav() {
                 </Flex>
                 {
                 isOpen ? (
-                    <Box pb={6}
-                        pt={6}
+                    <Box pb={4}
                         display={
                             {md: 'none'}
                     }>
-                        <Flex justifyContent="center">
-                            <Stack as={'nav'}
-                                spacing={4}>
-                                {
-                                Links.map((link) => (
-                                    <NavLink key={link}>
-                                        {link} </NavLink>
-                                ))
-                            } </Stack>
-                        </Flex>
+                        <Stack as={'nav'}
+                            spacing={4}>
+                            {
+                            Links.map((link) => (
+                                <NavLink key={link}>
+                                    {link}</NavLink>
+                            ))
+                        } </Stack>
                     </Box>
                 ) : null
             } </Box>
