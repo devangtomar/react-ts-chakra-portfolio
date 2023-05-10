@@ -17,12 +17,27 @@ import {
 import {MoonIcon, SunIcon} from '@chakra-ui/icons';
 import {HamburgerIcon, CloseIcon} from '@chakra-ui/icons';
 const Links = [
-    'About 🙋‍♂️',
-    'Blog 📃',
-    'Projects 📝',
-    'Illustration 🖼️',
-    'GitHub 👨‍💻'
+    {
+        label: 'About 🙋‍♂️',
+        color: 'blue'
+    },
+    {
+        label: 'Blog 📃',
+        color: 'green'
+    },
+    {
+        label: 'Projects 📝',
+        color: 'purple'
+    },
+    {
+        label: 'Illustration 🖼️',
+        color: 'orange'
+    }, {
+        label: 'GitHub 👨‍💻',
+        color: 'pink'
+    },
 ];
+
 
 const NavLink = ({children} : {
     children: ReactNode
