@@ -29,17 +29,13 @@ const NavLink = ({children} : {
 }) => (
     <Link px={2}
         py={1}
-        rounded={'md'}
+        rounded={'xl'}
         _hover={
-            {
-                textDecoration: 'none',
-                bg: useColorModeValue('gray.200', 'gray.700')
-            }
+            {textDecoration: 'none'}
         }
         href={'#'}
-        fontSize={'xl'}
-        fontWeight={'medium'}
-        >
+        fontSize={'sm'}
+        fontWeight={'medium'}>
         {children} </Link>
 );
 
@@ -54,7 +50,7 @@ export default function Nav() {
                 <Flex h={20}
                     alignItems={'center'}
                     justifyContent={'space-between'}
-                    px={6}> 
+                    px={6}>
                     <Flex alignItems={'center'}>
                         <Avatar name='Devang Tomar' size='md' src='../../../assets/avatar.jpg'/>
                         <Heading size={"md"}
@@ -82,10 +78,10 @@ export default function Nav() {
                             onClick={
                                 isOpen ? onClose : onOpen
                             }/>
-                        <HStack spacing={8}
+                        <HStack spacing={2}
                             alignItems={'center'}>
                             <HStack as={'nav'}
-                                spacing={4}
+                                spacing={2}
                                 display={
                                     {
                                         base: 'none',
@@ -103,14 +99,12 @@ export default function Nav() {
                 </Flex>
                 {
                 isOpen ? (
-                    <Box pb={8}
-                        pt={8}
-                        display={
-                            {md: 'none'}
+                    <Box display={
+                        {md: 'none'}
                     }>
                         <Flex justifyContent="center">
                             <Stack as={'nav'}
-                                spacing={4}>
+                                spacing={2}>
                                 {
                                 Links.map((link) => (
                                     <NavLink key={link}>

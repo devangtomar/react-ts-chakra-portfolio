@@ -1,17 +1,21 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {ChakraProvider, Box, Center} from "@chakra-ui/react";
 import About from "./app/about/About";
-import {ChakraProvider} from '@chakra-ui/react'
 
 function App() {
     return (
         <ChakraProvider>
-            <Router>
-                <Routes>
-                    <Route path="/"
-                        element={<About/>}/>
-                </Routes>
-            </Router>
+            <Center>
+                <Box>
+                    <Router>
+                        <Routes>
+                            <Route path="/"
+                                element={<About/>}/>
+                        </Routes>
+                    </Router>
+                </Box>
+            </Center>
         </ChakraProvider>
     );
 }
