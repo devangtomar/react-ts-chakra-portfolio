@@ -6,16 +6,17 @@ import {
     Text
 } from '@chakra-ui/react'
 import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa'
-import {Box, Flex} from '@chakra-ui/react';
+import {Box, Flex, Divider, useBreakpointValue} from '@chakra-ui/react';
 
 export default function Footer() {
+    const padding = useBreakpointValue({base: 6, lg: 20});
     return (
-        <Box>
-            <hr/>
+        <Box p={padding}>
+            <Divider/>
             <Flex align="center" justify="space-between" borderTop="1px solid #ccc"
                 p={2}>
                 <Box ml={2}>
-                    <Text fontSize="sm" color="fg.subtle">
+                    <Text fontSize="m" color="fg.subtle" as='b'>
                         Devang Tomar © 2023
                     </Text>
                 </Box>
@@ -40,7 +41,6 @@ export default function Footer() {
                         </ButtonGroup>
                     </Stack>
                 </Flex>
-
             </Flex>
         </Box>
     );
