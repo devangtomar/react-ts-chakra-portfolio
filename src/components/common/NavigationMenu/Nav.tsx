@@ -54,9 +54,9 @@ export default function Nav() {
                 <Flex h={20}
                     alignItems={'center'}
                     justifyContent={'space-between'}
-                    px={6}>
+                    px={6}> 
                     <Flex alignItems={'center'}>
-                        <Avatar name='Devang Tomar' size='md' src='https://avatars.githubusercontent.com/u/32426600?v=4'/>
+                        <Avatar name='Devang Tomar' size='md' src='../../../assets/avatar.jpg'/>
                         <Heading size={"md"}
                             ml={4}>Devang Tomar</Heading>
                     </Flex>
