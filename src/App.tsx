@@ -7,7 +7,7 @@ function App() {
     return (
         <ChakraProvider>
             <Center>
-                <Box>
+                <Box maxWidth="1800px">
                     <Router>
                         <Routes>
                             <Route path="/"
